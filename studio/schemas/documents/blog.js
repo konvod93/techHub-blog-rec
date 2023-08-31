@@ -25,13 +25,9 @@ export default {
             type: 'datetime',
         },
         {
-            title: 'cover image',
+            title: 'Cover Image',
             name: 'coverImage',
-            type: 'image',
-            options: {
-                hotspot: true,
-
-            },
-        },
+            type: 'customImage',
+        }        
     ]
 };
