@@ -1,3 +1,4 @@
+import { format } from 'date-fns';
 import { GiNotebook } from 'react-icons/gi';
 export default {
     title: 'Blog Post',
@@ -29,5 +30,21 @@ export default {
             name: 'coverImage',
             type: 'customImage',
         }        
-    ]
+    ],
+    preview: {
+        select: {
+            image: 'coverImage',
+            title: 'title',
+            publishedAt: 'publishedAt',
+        },
+        prepare ({ image, title, publishedAt }) {
+            return {
+                title,
+                media: image,
+                subtitle: publishedAt
+                 ? format(new Date(publishedAt), 'p, dd/MM/yyyy')
+                  : '',
+            }
+        },
+    }
 };
