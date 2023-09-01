@@ -43,7 +43,9 @@ export default {
         },
         {
             type: 'customImage',
-
         },
+        {
+            type: 'customCode',
+        }
     ],
 };
