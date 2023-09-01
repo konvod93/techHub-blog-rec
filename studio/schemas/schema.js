@@ -12,8 +12,9 @@ import author from './documents/author';
 // import custom objects
 
 import customImage from './objects/customImage';
+import bodyText from './objects/bodyText';
 
 export default createSchema({
   name: 'default',
-  types: schemaTypes.concat([blog, author, customImage]),
+  types: schemaTypes.concat([blog, author, customImage, bodyText]),
 });

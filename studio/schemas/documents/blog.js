@@ -29,7 +29,12 @@ export default {
             title: 'Cover Image',
             name: 'coverImage',
             type: 'customImage',
-        }        
+        } ,
+        {
+            title: 'Blog Bode',
+            name: 'body',
+            type: 'bodyText',
+        }       
     ],
     preview: {
         select: {
