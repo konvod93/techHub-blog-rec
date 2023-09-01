@@ -37,7 +37,7 @@ export default {
             title: 'title',
             publishedAt: 'publishedAt',
         },
-        prepare ({ image, title, publishedAt }) {
+        prepare({ image, title, publishedAt }) {
             return {
                 title,
                 media: image,
