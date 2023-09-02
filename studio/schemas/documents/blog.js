@@ -31,6 +31,11 @@ export default {
             type: 'customImage',
         } ,
         {
+            title: 'Excerpt',
+            name: 'excerpt',
+            type: 'excerptText',
+        },
+        {
             title: 'Blog Bode',
             name: 'body',
             type: 'bodyText',
