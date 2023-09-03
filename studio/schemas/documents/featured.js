@@ -8,7 +8,7 @@ export default {
     fields: [
         {
             title: 'Title',
-            name:'tutle',
+            name:'title',
             type: 'string',
         },
         {
@@ -27,7 +27,7 @@ export default {
             ],
         },
         {
-            name: 'categories',
+            name: 'category',
             title: 'Featured Top Categories',
             type: 'array',
             of: [
