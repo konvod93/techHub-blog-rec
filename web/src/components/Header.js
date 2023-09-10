@@ -9,6 +9,12 @@ import clsx from 'clsx'
 
 function Header() {
   const [isNavOpen, setIsNavOpen] = useState(false);
+
+  const handleNavItemClick = () => {
+    if (isNavOpen) {
+      setIsNavOpen(false)
+    }
+  }
   return (
     <HeaderStyles>
       <div className="container">
@@ -31,6 +37,16 @@ function Header() {
                 <MdMenu />
               </ActionButton>
             </div>
+            {isNavOpen && (
+              <div 
+              className="mobileNavBg"
+              area-label="close menu" 
+              role="button" 
+              tabIndex={0} 
+              onClick={() => setIsNavOpen(false)}
+              onKeyDown={() => setIsNavOpen(false)}
+              ></div>
+            )}
             <nav>
               <ActionButton
                 className="mobileMenuCloseBtn"
@@ -42,7 +58,7 @@ function Header() {
               <ul>
                 {menu.map((item) => (
                   <li key={item.path}>
-                    <Link to={item.path}>{item.title}</Link>
+                    <Link to={item.path} onClick={handleNavItemClick}>{item.title}</Link>
                   </li>
                 ))}
                 <li className="searchIcon">
