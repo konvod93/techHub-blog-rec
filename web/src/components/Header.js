@@ -12,9 +12,9 @@ function Header() {
 
   const handleNavItemClick = () => {
     if (isNavOpen) {
-      setIsNavOpen(false)
+      setIsNavOpen(false);
     }
-  }
+  };
   return (
     <HeaderStyles>
       <div className="container">
@@ -38,13 +38,13 @@ function Header() {
               </ActionButton>
             </div>
             {isNavOpen && (
-              <div 
-              className="mobileNavBg"
-              area-label="close menu" 
-              role="button" 
-              tabIndex={0} 
-              onClick={() => setIsNavOpen(false)}
-              onKeyDown={() => setIsNavOpen(false)}
+              <div
+                className="mobileNavBg"
+                area-label="close menu"
+                role="button"
+                tabIndex={0}
+                onClick={() => setIsNavOpen(false)}
+                onKeyDown={() => setIsNavOpen(false)}
               ></div>
             )}
             <nav>
@@ -58,7 +58,9 @@ function Header() {
               <ul>
                 {menu.map((item) => (
                   <li key={item.path}>
-                    <Link to={item.path} onClick={handleNavItemClick}>{item.title}</Link>
+                    <Link to={item.path} onClick={handleNavItemClick}>
+                      {item.title}
+                    </Link>
                   </li>
                 ))}
                 <li className="searchIcon">
