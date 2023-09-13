@@ -27,7 +27,11 @@ function Footer() {
                             <a href={item.url}>{item.icon}</a>
                         </li>
                     ))}
-                </ul>               
+                </ul>
+                <ParagraphText className="copywright">
+                    &copy; TechoBlog Creative {new Date().getFullYear()}. All Rights
+                    reserved
+                </ParagraphText>               
             </div>
         </FooterStyles>
     );
